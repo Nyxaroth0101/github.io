@@ -1,0 +1,67 @@
+<?php
+// Látogató IP-címe
+$ip = $_SERVER['REMOTE_ADDR'];
+
+// Fájl neve
+$file = "ipk.txt";
+
+// Dátum
+$date = date("Y-m-d H:i:s");
+
+// Adat formázása
+$data = "IP: $ip | Idő: $date\n";
+
+// Mentés
+file_put_contents($file, $data, FILE_APPEND);
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Majd rá jössz</title>
+
+<style>
+    body{
+        margin:0;
+        background:#000;
+        color:white;
+        font-family:Arial, sans-serif;
+        text-align:center;
+    }
+
+    header{
+        background:#000;
+        padding:20px;
+        font-size:40px;
+        font-weight:bold;
+        color:red;
+        box-shadow:0 0 15px rgba(255,0,0,0.4);
+    }
+
+    .content{
+        margin-top:30px;
+    }
+
+    img{
+        max-width:90%;
+        height:auto;
+        border-radius:10px;
+        box-shadow:0 0 25px rgba(255,255,255,0.2);
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    Majd rá jössz
+</header>
+
+<div class="content">
+    <img src="https://www.bikuci.hu/wp-content/uploads/2026/05/VK1778420054-1024x1143.webp" alt="Kép">
+</div>
+
+</body>
+</html>
